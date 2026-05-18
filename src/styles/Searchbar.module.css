@@ -1,0 +1,11 @@
+.searchBox {
+    color: red;
+    border: 5px solid red;
+    border-radius: 15px;
+    display: flex;
+}
+
+.searchlabel {
+    color: red;
+
+}

@@ -1,16 +1,27 @@
 import { Search } from 'react-bootstrap-icons';
+import styles from '../styles/Searchbar.module.css';
 
 function Searchbar() {
     return (
-        <div>
-            <div>
-                <label htmlFor="searchbar">Search here!</label>
-                <input type="text" id="searchbar" />
+        <div className={styles.searchBox}>
+            <div className='btn d-flex gap-1'>
+                <input
+                    type="text"
+                    id="searchbar"
+                    placeholder=" "
+                />
+                <label
+                    htmlFor="searchbar"
+                    className={styles.searchLabel}>
+                    Search here!
+                </label>
             </div>
-            <button className="btn">
-                <Search />
-            </button>
+            <div>
+                <button className="btn">
+                    <Search />
+                </button>
+            </div>
         </div>
     )
 }
-export default Searchbar
+export default Searchbar;
