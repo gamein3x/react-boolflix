@@ -1,9 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import MainLayout from "./layouts/MainLayout";
-import HomePage from "./pages/HomePage";
-import NotFound from "./pages/NotFound";
+
+import { HomePage, About, NotFound } from './pages';
+
 import { Bootstrap } from "react-bootstrap-icons";
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
         <Routes>
           <Route element={<MainLayout />}>
             <Route index element={<HomePage />} />
+            <Route path="about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
