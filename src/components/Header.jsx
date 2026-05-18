@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import useTheme from "../hooks/useTheme";
+import Searchbar from "./Searchbar";
 
 function Header() {
     const { theme, toggleTheme } = useTheme();
@@ -17,6 +18,7 @@ function Header() {
                     >
                         <span className="navbar-toggler-icon" />
                     </button>
+                    <Searchbar />
                     <div className="collapse navbar-collapse" id="mainNav">
                         <ul className="navbar-nav ms-auto align-items-center">
                             <li className="nav-item">

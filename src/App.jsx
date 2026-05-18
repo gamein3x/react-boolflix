@@ -3,6 +3,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
+import { Bootstrap } from "react-bootstrap-icons";
 
 function App() {
   return (
