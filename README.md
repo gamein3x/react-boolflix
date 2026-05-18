@@ -42,3 +42,30 @@ Aggiornato README.md fino a questo punto; creato account su TMDB come primo step
 Creata API KEY e sperimentato con le chiamate POSTMAN della chiave di TMDB; 
 - Obiettivo per oggi: searchbar funzionante;
 - Idea per il progetto: creare pagina di recensioni, tema comico, versione buona-standard-malvagia;
+
+### [16:10-17:00]
+Definito progetto e struttura. 
+Non prenderò ispirazione per il layout o per le funzionalità da Netflix ma da Letterboxd, creando un sito di recensioni per i film.
+
+    Obiettivi aggiuntivi:   
+                            -Mettere una pagina "recensioni" (invece di pagina film) che deve contenere:
+                                -Copertina del film;
+                                -Recensione generata da claude;
+                            -Creare bottone per modalità buona-standard-malvagia che determina il contesto della risposta;
+
+    Route da creare:
+    
+    ---LAYOUT-- Contiene Header (contiene searchbar+pageindex) e footer (solo in modalità mb? forse)
+                            -Homepage (index)
+                                Contiene 
+                                    -Main
+                                        Contiene    
+                                            -Lista Film sidescroller 1 (ultime uscite)
+                                            -Lista Film sidescroller 2 (recensioni più alte)
+                                            -Lista Film sidescroller 3 (recensioni più basse)
+                            -About us
+                            -Pagina recensioni
+                            -404
+                
+
+
