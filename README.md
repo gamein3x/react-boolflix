@@ -74,10 +74,43 @@ Riprendo dal lavoro (non documentato) di ieri notte: creato il componente per la
 Workflow da rispettare:
     Input →
     setQuery →
-    debounce →
     fetch API →
+    debounce →   
     loading →
     results/error →
     render
 
+### [11:15-13:10]
+Maneggiato la funzione per la fetch finchè non mi ha soddisfatto e smesso di restituire errori; studiato il funzionamento di una searchbar e implementato valori con useState e useEffect correttamente.
 
+L'idea è di far apparire il nome (name) dei primi 10 film come barra sotto, poi portare alla pagina recensione. A quel punto considero la searchbar pronta e vado avanti.
+
+Rubato questo modale carino dal sito della documentazione di tmdb da usare dopo:
+```
+<mdn-search-modal id="search"><template shadowrootmode="open"><!---->
+      <dialog closedby="any" open="">
+        <form method="get" action="/en-US/search">
+          <input type="search" name="q" autocomplete="off" autofocus="" placeholder="Search" aria-label="Search">
+        </form>
+        <mdn-button class="close" variant="plain" icon-only=""><template shadowrootmode="open"><!---->
+        <button class="button" part="button" aria-labelledby="label-mhbfkjdpigp" data-variant="plain">
+          <!--?lit$015333916$--><!----><span class="icon" part="icon"><!--?lit$015333916$--><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"></path></svg></span><!----><!---->
+    <span class="label" part="label" id="label-mhbfkjdpigp" hidden=""><!--?lit$015333916$--><slot></slot></span>
+  <!---->
+        </button>
+      </template><!--?lit$015333916$-->Exit search</mdn-button>
+        <!--?lit$015333916$-->
+        <ul>
+          <!--?lit$015333916$-->
+          <!--?lit$015333916$-->
+        </ul>
+      </dialog>
+    </template></mdn-search-modal>
+```
+
+### [13.10-13.55]
+Map e loading state gestite momentaneamente in Header per la searchbar.
+Migliorata ulteriormente la fetch.
+
+Non riesco in nessun modo a far funzionare la querystring con la chiave API, anche se il file .env è collegato correttamente. Boh. 
+=> Era semplicemente il modo in cui avevo richiesto la chiave all'API, l'ho corretto guardando la documentazione TMBD e adesso restituisce i risultati correttamente. Posso mangiare.

@@ -1,9 +1,14 @@
 import { NavLink } from "react-router";
 import useTheme from "../hooks/useTheme";
 import Searchbar from "./Searchbar";
+import { useState, useEffect } from 'react';
 
 function Header() {
     const { theme, toggleTheme } = useTheme();
+
+    const [query, setQuery] = useState('');
+    const [loading, setLoading] = useState(true);
+    const [results, setResults] = useState([]);
 
     return (
         <header>
@@ -40,7 +45,13 @@ function Header() {
                     </div>
                 </div>
             </nav>
+            {loading && <p>Loading...</p>}
+
+            {results.map((item) => (
+                <div key={item.id}>{item.name}</div>
+            ))}
         </header>
+
     );
 }
 

@@ -5,16 +5,21 @@ import { useState, useEffect } from 'react';
 import { Search } from 'react-bootstrap-icons';
 import styles from '../styles/Searchbar.module.css';
 
+const API_key = import.meta.env.VITE_TMDB_API_KEY;
+
+console.log(API_key);
 
 function Searchbar() {
     const [query, setQuery] = useState('');
     const [loading, setLoading] = useState(true);
     const [results, setResults] = useState([]);
 
-    const API_urlAndquery = `https://api.themoviedb.org/3/search/movie?query=${query}&language=it-IT`; //
-
     function searchAPI() {
-        fetch(API_urlAndquery)
+        const API_searchQuery = `https://api.themoviedb.org/3/search/movie?query=${query}&language=it-IT`;
+        fetch(API_searchQuery, {
+            headers: {
+                Authorization: `Bearer ${API_key}`
+            }})
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Errore nella richiesta");
