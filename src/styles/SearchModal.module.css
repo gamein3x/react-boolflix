@@ -1,0 +1,6 @@
+.modaleBox {
+    position: fixed;
+    min-width: 80vw;
+    aspect-ratio: 1;
+    background: grey;
+}

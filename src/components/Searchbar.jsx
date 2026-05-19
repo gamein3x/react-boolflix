@@ -51,7 +51,7 @@ function Searchbar() {
 
     const handleInputChange = (input) => {
         setQuery(input.target.value);  // aggiorna lo stato a ogni tasto
-    };
+    }; 
 
     return (
         <div className={styles.searchBox}>
