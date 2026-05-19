@@ -68,4 +68,16 @@ Non prenderò ispirazione per il layout o per le funzionalità da Netflix ma da 
                             -404
                 
 
+### [10.15-11.00]
+Riprendo dal lavoro (non documentato) di ieri notte: creato il componente per la searchbar e implementata prima useState con modulo CSS associato in /styles/ (per adesso solo per evidenziare);
+
+Workflow da rispettare:
+    Input →
+    setQuery →
+    debounce →
+    fetch API →
+    loading →
+    results/error →
+    render
+
 

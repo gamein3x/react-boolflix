@@ -1,11 +1,23 @@
+// Import
+import { useState, useEffect } from 'react';
+
 // Import stili
 import { Search } from 'react-bootstrap-icons';
 import styles from '../styles/Searchbar.module.css';
-// Import
-import { useState } from 'react';
+
+
+
+function dannataFetch() {
+
+}
+
+
+
 
 function Searchbar() {
     const [query, setQuery] = useState('');
+
+    const API_urlAndquery = `https://api.themoviedb.org/3/search/movie/${query}`;
 
     const handleInputChange = (input) => {
         setQuery(input.target.value);  // aggiorna lo stato a ogni tasto
@@ -35,4 +47,5 @@ function Searchbar() {
         </div>
     )
 }
+
 export default Searchbar;
